@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="http://riskdatalibrary.org/common.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Common tables - Risk Data Library docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Common tables";
+    var mkdocs_page_input_path = "common.md";
+    var mkdocs_page_url = "/common.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Risk Data Library docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Home</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data schemas</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="common.html">Common tables</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#table-cf_commonhazard_type">Table: cf_common.hazard_type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-cf_commonprocess_type">Table: cf_common.process_type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-cf_commonimt">Table: cf_common.imt</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-cf_commonlicense">Table: cf_common.license</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#type-cf_commonoccupancy_enum">Type: cf_common.occupancy_enum</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="hazard.html">Hazard schema</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="exposure.html">Exposure schema</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vulnerability.html">Vulnerability schema</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="loss.html">Loss schema</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data transfer</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="import.html">Data import</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="export.html">Data export</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="API.html">API list</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="metadata.html">Metadata</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="license.html">License</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Risk Data Library docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Data schemas &raquo;</li>
+        
+      
+    
+    <li>Common tables</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/GFDRR/rdl-doc/edit/master/docs/common.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="common-tables">Common tables</h2>
+<p>Each schema has specific tables, but as part of the database schema harmonization process, we make use of a <em>cf_common</em> namespace containing tables that are common to each schema. This ensures consistent hazard naming, intensity parameters and licences within each schema.
+1. The <em>cf_common.hazard_type</em> table contains the hazard codes and related names.
+2. The <em>cf_common.process_type</em> table contains the process type codes and related names (each hazard may have more than one process).
+3. The <em>cf_common.imt</em> table contains the intensity measure for each process and its description.
+4. The <em>cf_common.license</em> table provides a list of supported open-data licenses and url for more detailed information.</p>
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Table name</th>
+<th align="center">Required</th>
+<th align="center">Field name</th>
+<th align="center">Type</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cf_common.hazard_type</td>
+<td align="center">*</td>
+<td align="center">code</td>
+<td align="center">VARCHAR</td>
+<td align="center">Unique 2-char code</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">name</td>
+<td align="center">VARCHAR</td>
+<td align="center">Name of hazard</td>
+</tr>
+<tr>
+<td>-------------------------------</td>
+<td align="center">-----------------</td>
+<td align="center">---------------------</td>
+<td align="center">----------------</td>
+<td align="center">-----------------------------------------</td>
+</tr>
+<tr>
+<td>cf_common.process_type</td>
+<td align="center">*</td>
+<td align="center">hazard_code</td>
+<td align="center">VARCHAR</td>
+<td align="center">Unique 2-char code</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">code</td>
+<td align="center">VARCHAR</td>
+<td align="center">Unique 3-char code</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">name</td>
+<td align="center">VARCHAR</td>
+<td align="center">Name of hazard process</td>
+</tr>
+<tr>
+<td>-------------------------------</td>
+<td align="center">-----------------</td>
+<td align="center">---------------------</td>
+<td align="center">----------------</td>
+<td align="center">-----------------------------------------</td>
+</tr>
+<tr>
+<td>cf_common.imt</td>
+<td align="center">*</td>
+<td align="center">process_code</td>
+<td align="center">VARCHAR</td>
+<td align="center">Unique 3-char code</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">hazard_code</td>
+<td align="center">VARCHAR</td>
+<td align="center">Unique 2-char code</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">im_code</td>
+<td align="center">VARCHAR</td>
+<td align="center">Alphanumeric code</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">description</td>
+<td align="center">VARCHAR</td>
+<td align="center">Description of unit of measure</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">units</td>
+<td align="center">VARCHAR</td>
+<td align="center">Unit of measure</td>
+</tr>
+<tr>
+<td>-------------------------------</td>
+<td align="center">-----------------</td>
+<td align="center">---------------------</td>
+<td align="center">----------------</td>
+<td align="center">-----------------------------------------</td>
+</tr>
+<tr>
+<td>cf_common.license</td>
+<td align="center">*</td>
+<td align="center">code</td>
+<td align="center">VARCHAR</td>
+<td align="center">Alphanumeric code</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">name</td>
+<td align="center">VARCHAR</td>
+<td align="center">Name of license</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center">notes</td>
+<td align="center">TEXT</td>
+<td align="center">Additional notes</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">*</td>
+<td align="center">url</td>
+<td align="center">VARCHAR</td>
+<td align="center">License url reference</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+The content of these common tables is as follows:</p>
+<h3 id="table-cf_commonhazard_type">Table: <em>cf_common.hazard_type</em></h3>
+<table class="table">
+<thead>
+<tr>
+<th scope="col"><strong>code</strong></th>
+<th scope="col"><strong>name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CF</strong></td>
+<td>Coastal Flood</td>
+</tr>
+<tr>
+<td><strong>CS</strong></td>
+<td>Convective Storm</td>
+</tr>
+<tr>
+<td><strong>DR</strong></td>
+<td>Drought</td>
+</tr>
+<tr>
+<td><strong>EQ</strong></td>
+<td>Earthquake</td>
+</tr>
+<tr>
+<td><strong>ET</strong></td>
+<td>Extreme Temperature</td>
+</tr>
+<tr>
+<td><strong>FL</strong></td>
+<td>Flood</td>
+</tr>
+<tr>
+<td><strong>LS</strong></td>
+<td>Landslide</td>
+</tr>
+<tr>
+<td><strong>MH</strong></td>
+<td>Multi-Hazard</td>
+</tr>
+<tr>
+<td><strong>TS</strong></td>
+<td>Tsunami</td>
+</tr>
+<tr>
+<td><strong>VO</strong></td>
+<td>Volcanic</td>
+</tr>
+<tr>
+<td><strong>WF</strong></td>
+<td>Wildfire</td>
+</tr>
+<tr>
+<td><strong>WI</strong></td>
+<td>Strong Wind</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-cf_commonprocess_type">Table: <em>cf_common.process_type</em></h3>
+<table class="table">
+<thead>
+<tr>
+<th scope="col"><strong>code</strong></th>
+<th scope="col"><strong>hazard_code</strong></th>
+<th scope="col"><strong>name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FCF</strong></td>
+<td>CF</td>
+<td>Coastal Flood</td>
+</tr>
+<tr>
+<td><strong>FSS</strong></td>
+<td>CF</td>
+<td>Storm Surge</td>
+</tr>
+<tr>
+<td><strong>TOR</strong></td>
+<td>CS</td>
+<td>Tornado</td>
+</tr>
+<tr>
+<td><strong>DTA</strong></td>
+<td>DR</td>
+<td>Agricultural Drought</td>
+</tr>
+<tr>
+<td><strong>DTH</strong></td>
+<td>DR</td>
+<td>Hydrological Drought</td>
+</tr>
+<tr>
+<td><strong>DTM</strong></td>
+<td>DR</td>
+<td>Meteorological Drought</td>
+</tr>
+<tr>
+<td><strong>DTS</strong></td>
+<td>DR</td>
+<td>Socio-economic Drought</td>
+</tr>
+<tr>
+<td><strong>Q1R</strong></td>
+<td>EQ</td>
+<td>Primary Rupture</td>
+</tr>
+<tr>
+<td><strong>Q2R</strong></td>
+<td>EQ</td>
+<td>Secondary Rupture</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>Ground Motion</td>
+</tr>
+<tr>
+<td><strong>QLI</strong></td>
+<td>EQ</td>
+<td>Liquefaction</td>
+</tr>
+<tr>
+<td><strong>ECD</strong></td>
+<td>ET</td>
+<td>Extreme cold</td>
+</tr>
+<tr>
+<td><strong>EHT</strong></td>
+<td>ET</td>
+<td>Extreme heat</td>
+</tr>
+<tr>
+<td><strong>FFF</strong></td>
+<td>FL</td>
+<td>Fluvial Flood</td>
+</tr>
+<tr>
+<td><strong>FPF</strong></td>
+<td>FL</td>
+<td>Pluvial Flood</td>
+</tr>
+<tr>
+<td><strong>LAV</strong></td>
+<td>LS</td>
+<td>Snow Avalanche</td>
+</tr>
+<tr>
+<td><strong>LSL</strong></td>
+<td>LS</td>
+<td>Landslide (general)</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>Tsunami</td>
+</tr>
+<tr>
+<td><strong>VAF</strong></td>
+<td>VO</td>
+<td>Ashfall</td>
+</tr>
+<tr>
+<td><strong>VBL</strong></td>
+<td>VO</td>
+<td>Ballistics</td>
+</tr>
+<tr>
+<td><strong>VFH</strong></td>
+<td>VO</td>
+<td>Proximal hazards</td>
+</tr>
+<tr>
+<td><strong>VLH</strong></td>
+<td>VO</td>
+<td>Lahar</td>
+</tr>
+<tr>
+<td><strong>VLV</strong></td>
+<td>VO</td>
+<td>Lava</td>
+</tr>
+<tr>
+<td><strong>VPF</strong></td>
+<td>VO</td>
+<td>Pyroclastic Flow</td>
+</tr>
+<tr>
+<td><strong>WFI</strong></td>
+<td>WF</td>
+<td>Wildfire</td>
+</tr>
+<tr>
+<td><strong>ETC</strong></td>
+<td>WI</td>
+<td>Extratropical cyclone</td>
+</tr>
+<tr>
+<td><strong>TCY</strong></td>
+<td>WI</td>
+<td>Tropical cyclone</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-cf_commonimt">Table: <em>cf_common.imt</em></h3>
+<table class="table">
+<thead>
+<tr>
+<th scope="col"><strong><em>process_code</em></strong></th>
+<th scope="col"><strong><em>hazard_code</em></strong></th>
+<th scope="col"><strong><em>im_code</em></strong></th>
+<th scope="col"><strong><em>description</em></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>PGA:g</td>
+<td>Peak ground acceleration in g</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>PGA:m/s2</td>
+<td>Peak ground acceleration in m/s2</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>PGV:m/s</td>
+<td>Peak ground velocity in m/s</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>SA(0.2):g</td>
+<td>Spectral acceleration with 0.2s period</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>SA(0.3):g</td>
+<td>Spectral acceleration with 0.3s period</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>SA(1.0):g</td>
+<td>Spectral acceleration with 1.0s period</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>SA(3.0):g</td>
+<td>Spectral acceleration with 3.0s period</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>SA(0.2):m/s2</td>
+<td>Spectral acceleration with 0.2s period</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>SA(0.3):m/s2</td>
+<td>Spectral acceleration with 0.3s period</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>SA(1.0):m/s2</td>
+<td>Spectral acceleration with 1.0s period</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>SA(3.0):m/s2</td>
+<td>Spectral acceleration with 3.0s period</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>Sd(T1):m</td>
+<td>Spectral displacement</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>Sv(T1):m/s</td>
+<td>Spectral velocity</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>PGDf:m</td>
+<td>Permanent ground deformation</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>D_a5-95:s</td>
+<td>Significant duration a5-95</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>D_a5-75 :s</td>
+<td>Significant duration a5-75</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>IA:m/s</td>
+<td>Arias intensity (IÎ±) or (IA) or (Ia)</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>Neq:-</td>
+<td>Effective number of cycles</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>EMS:-</td>
+<td>European macroseismic scale</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>AvgSa:m/s2</td>
+<td>Average spectral acceleration</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>I_Np:m/s2</td>
+<td>I_Np by BojÃ³rquez and Iervolino</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>MMI:-</td>
+<td>Modified Mercalli Intensity</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>CAV:m/s</td>
+<td>Cumulative absolute velocity</td>
+</tr>
+<tr>
+<td><strong>QGM</strong></td>
+<td>EQ</td>
+<td>D_B:s</td>
+<td>Bracketed duration</td>
+</tr>
+<tr>
+<td><strong>FFF</strong></td>
+<td>FL</td>
+<td>d_fff:m</td>
+<td>Flood water depth</td>
+</tr>
+<tr>
+<td><strong>FPF</strong></td>
+<td>FL</td>
+<td>d_fpf:m</td>
+<td>Flood water depth</td>
+</tr>
+<tr>
+<td><strong>FFF</strong></td>
+<td>FL</td>
+<td>v_fff:m/s</td>
+<td>Flood flow velocity</td>
+</tr>
+<tr>
+<td><strong>FPF</strong></td>
+<td>FL</td>
+<td>v_fpf:m/s</td>
+<td>Flood flow velocity</td>
+</tr>
+<tr>
+<td><strong>TCY</strong></td>
+<td>WI</td>
+<td>v_tcy(3s):km/h</td>
+<td>3-sec at 10m sustained wind speed (kph)</td>
+</tr>
+<tr>
+<td><strong>ETC</strong></td>
+<td>WI</td>
+<td>v_ect(3s):km/h</td>
+<td>3-sec at 10m sustained wind speed (kph)</td>
+</tr>
+<tr>
+<td><strong>TCY</strong></td>
+<td>WI</td>
+<td>v_tcy(1m):km/h</td>
+<td>1-min at 10m sustained wind speed (kph)</td>
+</tr>
+<tr>
+<td><strong>ETC</strong></td>
+<td>WI</td>
+<td>v_ect(1m):km/h</td>
+<td>1-min at 10m sustained wind speed (kph)</td>
+</tr>
+<tr>
+<td><strong>TCY</strong></td>
+<td>WI</td>
+<td>v_tcy(10m):km/h</td>
+<td>10-min sustained wind speed (kph)</td>
+</tr>
+<tr>
+<td><strong>ETC</strong></td>
+<td>WI</td>
+<td>v_etc(10m):km/h</td>
+<td>10-min sustained wind speed (kph)</td>
+</tr>
+<tr>
+<td><strong>TCY</strong></td>
+<td>WI</td>
+<td>PGWS_tcy:km/h</td>
+<td>Peak gust wind speed</td>
+</tr>
+<tr>
+<td><strong>ETC</strong></td>
+<td>WI</td>
+<td>PGWS_ect:km/h</td>
+<td>Peak gust wind speed</td>
+</tr>
+<tr>
+<td><strong>LSL</strong></td>
+<td>LS</td>
+<td>d_lsl:m</td>
+<td>Landslide flow depth</td>
+</tr>
+<tr>
+<td><strong>LSL</strong></td>
+<td>LS</td>
+<td>I_DF:m3/s2</td>
+<td>Debris-flow intensity index</td>
+</tr>
+<tr>
+<td><strong>LSL</strong></td>
+<td>LS</td>
+<td>v_lsl:m/s2</td>
+<td>Landslide flow velocity</td>
+</tr>
+<tr>
+<td><strong>LSL</strong></td>
+<td>LS</td>
+<td>MFD_lsl:m</td>
+<td>Maximum foundation displacement</td>
+</tr>
+<tr>
+<td><strong>LSL</strong></td>
+<td>LS</td>
+<td>SD_lsl:m</td>
+<td>Landslide displacement</td>
+</tr>
+<tr>
+<td><strong>LSL</strong></td>
+<td>LS</td>
+<td>LSI:-</td>
+<td>Landslide susceptibility Index</td>
+</tr>
+<tr>
+<td><strong>LSL</strong></td>
+<td>LS</td>
+<td>haz_lsl:-</td>
+<td>Landslide hazard index</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>Rh_tsi:m</td>
+<td>Tsunami wave runup height</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>d_tsi:m</td>
+<td>Tsunami inundation depth</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>MMF:m4/s2</td>
+<td>Modified momentum flux</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>F_drag:kN</td>
+<td>Drag force</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>Fr:-</td>
+<td>Froude number</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>v_tsi:m/s</td>
+<td>Tsunami velocity</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>F_QS:kN</td>
+<td>Quasi-steady force</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>MF:m3/s2</td>
+<td>Momentum flux</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>h_tsi:m</td>
+<td>Tsunami wave height</td>
+</tr>
+<tr>
+<td><strong>TSI</strong></td>
+<td>TS</td>
+<td>Fh_tsi:m</td>
+<td>Tsunami Horizontal Force</td>
+</tr>
+<tr>
+<td><strong>VAF</strong></td>
+<td>VO</td>
+<td>h_vaf:m</td>
+<td>Ash fall thickness</td>
+</tr>
+<tr>
+<td><strong>VAF</strong></td>
+<td>VO</td>
+<td>L_vaf:kg/m2</td>
+<td>Ash loading</td>
+</tr>
+<tr>
+<td><strong>FSS</strong></td>
+<td>CF</td>
+<td>v_fss:m/s</td>
+<td>Maximum water velocity</td>
+</tr>
+<tr>
+<td><strong>FSS</strong></td>
+<td>CF</td>
+<td>d_fss:m</td>
+<td>Storm surge inundation depth</td>
+</tr>
+<tr>
+<td><strong>DTA</strong></td>
+<td>DR</td>
+<td>CMI:-</td>
+<td>Crop Moisture Index</td>
+</tr>
+<tr>
+<td><strong>DTM</strong></td>
+<td>DR</td>
+<td>PDSI:-</td>
+<td>Palmer Drought Severity Index</td>
+</tr>
+<tr>
+<td><strong>DTM</strong></td>
+<td>DR</td>
+<td>SPI:-</td>
+<td>Standard Precipitation Index</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-cf_commonlicense">Table: <em>cf_common.license</em></h3>
+<table class="table">
+<thead>
+<tr>
+<th scope="col"><strong>code</strong></th>
+<th scope="col"><strong>name</strong></th>
+<th scope="col"><strong>description</strong></th>
+<th scope="col"><strong>url</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CC0</strong></td>
+<td>Creative Commons CCZero (CC0)</td>
+<td>Dedicate to the Public Domain (all rights waived)</td>
+<td>https://creativecommons.org/publicdomain/zero/1.0/</td>
+</tr>
+<tr>
+<td><strong>CC BY 4.0</strong></td>
+<td>Creative Commons Attribution 4.0 (CC-BY-4.0)</td>
+<td></td>
+<td>https://creativecommons.org/licenses/by/4.0/</td>
+</tr>
+<tr>
+<td><strong>CC BY-SA 4.0</strong></td>
+<td>Creative Commons Attribution Share-Alike 4.0 (CC-BY-SA-4.0)</td>
+<td></td>
+<td>http://creativecommons.org/licenses/by-sa/4.0/</td>
+</tr>
+<tr>
+<td><strong>ODbL</strong></td>
+<td>Open Data Commons Open Database License (ODbL)</td>
+<td>Attribution-ShareAlike for data(bases)</td>
+<td>https://opendatacommons.org/licenses/odbl/summary/</td>
+</tr>
+<tr>
+<td><strong>ODC-By</strong></td>
+<td>Open Data Commons Attribution License(ODC-BY)</td>
+<td>Attribution for data(bases)</td>
+<td>https://opendatacommons.org/licenses/by/summary/</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="type-cf_commonoccupancy_enum">Type: <em>cf_common.occupancy_enum</em></h3>
+<p>Enumerator list of common types related to asset occupancy.</p>
+<table class="table">
+<thead>
+<tr>
+<th scope="col"><strong>ENUM</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Residential</td>
+</tr>
+<tr>
+<td>Commercial</td>
+</tr>
+<tr>
+<td>Industrial</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+</tr>
+<tr>
+<td>Healthcare</td>
+</tr>
+<tr>
+<td>Educational</td>
+</tr>
+<tr>
+<td>Government</td>
+</tr>
+<tr>
+<td>Crop</td>
+</tr>
+<tr>
+<td>Livestock</td>
+</tr>
+<tr>
+<td>Forestry</td>
+</tr>
+<tr>
+<td>Mixed</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hazard.html" class="btn btn-neutral float-right" title="Hazard schema">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/GFDRR/rdl-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="overview.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="hazard.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
