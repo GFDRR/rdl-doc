@@ -127,3 +127,5 @@ An enumerated list of possible hazard footprint calculation methods applied.
 | INF | Inferred |
 | SIM | Simulated |
 | OBS | Observed |
+
+<br/>

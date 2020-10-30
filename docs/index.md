@@ -1,7 +1,4 @@
 # Risk Data Library documentation
-
-This documentation refers to .
-
 ## General aim
 
 The Risk Data Schema [(riskdatalibrary.org)](http://riskdatalibrary.org) is a language for describing hazard, exposure, vulnerability and modelled loss data. It provides:
