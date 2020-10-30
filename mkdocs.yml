@@ -2,6 +2,7 @@ site_name: Risk Data Library docs
 site_url: http://riskdatalibrary.org
 use_directory_urls: false
 repo_url: https://github.com/GFDRR/rdl-doc
+edit_uri: tree/main/docs
 
 nav:
 - Home:
