@@ -1,0 +1,32 @@
+site_name: Risk Data Library docs
+site_url: http://riskdatalibrary.org
+use_directory_urls: false
+
+nav:
+- Home:
+    - 'Introduction': 'index.md'
+- Data schemas:
+    - 'Overview': 'overview.md'
+    - 'Common tables': 'common.md'
+    - 'Hazard schema': 'hazard.md'
+    - 'Exposure schema': 'exposure.md'
+    - 'Vulnerability schema': 'vulnerability.md'
+    - 'Loss schema': 'loss.md'
+- Data transfer:
+    - Data import: 'import.md'
+    - Data export: 'export.md'
+    - API list: 'API.md'
+- About:
+    - 'Glossary': 'glossary.md'
+    - 'Metadata': 'metadata.md'
+    - 'License': 'license.md'
+    - 'FAQ': 'faq.md'
+
+theme: readthedocs
+
+extra_css:
+    - css/extra.css
+
+plugins:
+  - search
+  - bootstrap-tables
