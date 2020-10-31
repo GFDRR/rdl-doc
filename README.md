@@ -13,6 +13,8 @@
 - clone the rdl-docs repo from github
 - update pip: "pip install --upgrade pip"
 - install mkdocs: "pip install mkdocs"
+- install mkdocs themes plugin: "pip install mkdocs-bootstrap"
+- install mkdocs table plugin: "pip install mkdocs-bootstrap-tables-plugin"
 
 ## Editing the documentation
 - The content of pages is located in docs/*.md markdown files 
