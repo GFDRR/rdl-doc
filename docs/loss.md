@@ -108,46 +108,15 @@ Each entry in this table provides the values for a loss esceedance curve and loc
 | **\*** | the\_geom | GEOM | | Associated geometry |
 
 <br/>
-###Type: _component\_enum._
-List of possible asset categories, consistent with the exposure schema.
+###Types
 
-| **component\_enum** | Description |
-|---| --- |
-| buildings | |
-| indicators | (e.g. GDP) |
-| infrastructure | (e.g. roads) |
-| crops, livestock and forestry | |
+Includes 4 types including the options for asset categories to which loss refers to, how the frequency is expressed, what is the metric in use and the types of losses.
 
-<br/>
-
-###Type: _frequency\_enum._
-List of possible categories to define how the frequency value is reported in _loss.curve\_map_
-
-| **frequency\_enum** |
-| --- |
-| Rate of Exceedence |
-| Probability of Exceedence |
-| Return Period |
-
-<br/>
-
-###Type: _loss\_type\_enum._
-List of possible categories to define loss type in_loss.curve\_map_ and _loss.map_.
-
-| **loss\_type\_enum** |
-| --- |
-| Ground Up |
-| Insured |
-
-
-<br/>
-###Type: _metric\_enum._
-List of possible categories to define loss metric in_loss.curve\_map_ and _loss.map_
-
-| **metric\_enum** | Description |
-| --- | --- |
-| AAL | Annual Average Losses |
-| AALR | Average Annual Loss Ratio |
-| PML | Probable Maximal Loss (also known as Return Period Loss) |
+| **ENUM name** | Types | Description |
+| --- | --- | --- |
+| component\_enum | <ul><li>Buildings<li>Indicator<li>Infrastructure<li>Crops, livestock and forestry | Types of possible asset categories, consistent with the exposure schema. Indicators refers for example to population density or GDP; infrastructure refers for example to roads, or electricity grid. |
+| frequency\_enum | <ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period | How the frequency value reported in _loss.curve\_map_ is expressed.|
+| metric\_enum | <ul><li>AAL<li>AALR<li>PML | Type of loss metric used in _loss.curve\_map_ and _loss.map_<br/><br/>Note:<br>AAL = Annual Average Losses<br>AALR = Average Annual Loss Ratio<br>PML = Probable Maximal Loss (also known as Return Period Loss) |
+| loss\_type\_enum | <ul><li>Ground Up<li>Insured | Type of losses in _loss.curve\_map_ and _loss.map_.|
 
 <br/>

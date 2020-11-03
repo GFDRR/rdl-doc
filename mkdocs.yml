@@ -15,12 +15,11 @@ nav:
     - 'Vulnerability schema': 'vulnerability.md'
     - 'Loss schema': 'loss.md'
 - Data transfer:
-    - Data import: 'import.md'
-    - Data export: 'export.md'
-    - API list: 'API.md'
-- About:
-    - 'Glossary': 'glossary.md'
+    - Import Data: 'import.md'
+    - Access Data: 'export.md'
+- Additional info:
     - 'Metadata': 'metadata.md'
+    - 'Glossary': 'glossary.md'
     - 'License': 'license.md'
     - 'FAQ': 'faq.md'
 
