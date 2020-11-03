@@ -79,31 +79,23 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#table-losscurve_map_values">Table: loss.curve_map_values</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#type-component_enum">Type: component_enum.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#type-frequency_enum">Type: frequency_enum.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#type-loss_type_enum">Type: loss_type_enum.</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#type-metric_enum">Type: metric_enum.</a>
+    <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
     </li>
     </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Data transfer</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="import.html">Data import</a>
+                    <li class="toctree-l1"><a class="reference internal" href="import.html">Import Data</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="export.html">Data export</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="API.html">API list</a>
+                    <li class="toctree-l1"><a class="reference internal" href="export.html">Access Data</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">About</span></p>
+                <p class="caption"><span class="caption-text">Additional info</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a>
-                    </li>
                     <li class="toctree-l1"><a class="reference internal" href="metadata.html">Metadata</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="license.html">License</a>
                     </li>
@@ -577,95 +569,36 @@ It describes the unit, type and metric of the loss, which is provided for a give
 </tbody>
 </table>
 <p><br/></p>
-<h3 id="type-component_enum">Type: <em>component_enum.</em></h3>
-<p>List of possible asset categories, consistent with the exposure schema.</p>
+<h3 id="types">Types</h3>
+<p>Includes 4 types including the options for asset categories to which loss refers to, how the frequency is expressed, what is the metric in use and the types of losses.</p>
 <table class="table">
 <thead>
 <tr>
-<th scope="col"><strong>component_enum</strong></th>
+<th scope="col"><strong>ENUM name</strong></th>
+<th scope="col">Types</th>
 <th scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>buildings</td>
-<td></td>
+<td>component_enum</td>
+<td><ul><li>Buildings<li>Indicator<li>Infrastructure<li>Crops, livestock and forestry</td>
+<td>Types of possible asset categories, consistent with the exposure schema. Indicators refers for example to population density or GDP; infrastructure refers for example to roads, or electricity grid.</td>
 </tr>
 <tr>
-<td>indicators</td>
-<td>(e.g. GDP)</td>
+<td>frequency_enum</td>
+<td><ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</td>
+<td>How the frequency value reported in <em>loss.curve_map</em> is expressed.</td>
 </tr>
 <tr>
-<td>infrastructure</td>
-<td>(e.g. roads)</td>
+<td>metric_enum</td>
+<td><ul><li>AAL<li>AALR<li>PML</td>
+<td>Type of loss metric used in <em>loss.curve_map</em> and <em>loss.map</em><br/><br/>Note:<br>AAL = Annual Average Losses<br>AALR = Average Annual Loss Ratio<br>PML = Probable Maximal Loss (also known as Return Period Loss)</td>
 </tr>
 <tr>
-<td>crops, livestock and forestry</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
-<h3 id="type-frequency_enum">Type: <em>frequency_enum.</em></h3>
-<p>List of possible categories to define how the frequency value is reported in <em>loss.curve_map</em></p>
-<table class="table">
-<thead>
-<tr>
-<th scope="col"><strong>frequency_enum</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Rate of Exceedence</td>
-</tr>
-<tr>
-<td>Probability of Exceedence</td>
-</tr>
-<tr>
-<td>Return Period</td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
-<h3 id="type-loss_type_enum">Type: <em>loss_type_enum.</em></h3>
-<p>List of possible categories to define loss type in_loss.curve_map_ and <em>loss.map</em>.</p>
-<table class="table">
-<thead>
-<tr>
-<th scope="col"><strong>loss_type_enum</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ground Up</td>
-</tr>
-<tr>
-<td>Insured</td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
-<h3 id="type-metric_enum">Type: <em>metric_enum.</em></h3>
-<p>List of possible categories to define loss metric in_loss.curve_map_ and <em>loss.map</em></p>
-<table class="table">
-<thead>
-<tr>
-<th scope="col"><strong>metric_enum</strong></th>
-<th scope="col">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AAL</td>
-<td>Annual Average Losses</td>
-</tr>
-<tr>
-<td>AALR</td>
-<td>Average Annual Loss Ratio</td>
-</tr>
-<tr>
-<td>PML</td>
-<td>Probable Maximal Loss (also known as Return Period Loss)</td>
+<td>loss_type_enum</td>
+<td><ul><li>Ground Up<li>Insured</td>
+<td>Type of losses in <em>loss.curve_map</em> and <em>loss.map</em>.</td>
 </tr>
 </tbody>
 </table>
@@ -677,7 +610,7 @@ It describes the unit, type and metric of the loss, which is provided for a give
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="import.html" class="btn btn-neutral float-right" title="Data import">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="import.html" class="btn btn-neutral float-right" title="Import Data">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="vulnerability.html" class="btn btn-neutral" title="Vulnerability schema"><span class="icon icon-circle-arrow-left"></span> Previous</a>
