@@ -77,7 +77,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#table-ged4alltags">Table: ged4all.tags</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#type-ged4allcategory_enum">Type: ged4all.category_enum</a>
+    <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
     </li>
     </ul>
                     </li>
@@ -145,7 +145,7 @@
               
                 <h2 id="exposure-db-schema">Exposure DB schema</h2>
 <p>The exposure schema was developed based on <a href="https://wiki.openstreetmap.org/wiki/GED4ALL">GEM Taxonomy 2.0</a> to accommodate the most important spatial features commonly employed in risk analysis to identify and estimate exposed value. 
-The GED4ALL database schema contains the following tables: contribution, exposure_model, asset, occupancy, cost, cost_type, and tags.</p>
+The <a href="https://www.hotosm.org/projects/global-exposure-database-for-all-ged4all">GED4ALL</a> database schema contains the following tables: contribution, exposure_model, asset, occupancy, cost, cost_type, and tags.</p>
 <p>Multiple types of structural/infrastructure assets and socio-economic exposure can be stored in the exposure database with attributes relevant to assessing risk from multiple hazards. 
 The exposure schema provides 11 defined exposure types, for consistent classification of assets in different datasets: Residential, Commercial, Industrial, Healthcare, Education, Government, Infrastructure, Crop, Livestock, Forestry, and Mixed (as in <em>cf_common.occupancy_enum</em>).
 The tables include general attributes that can be adapted to each asset type. More specific indicators can be stored using the <em>tags</em> table, e.g. population gender and age, urban growth rate, GDP or others.</p>
@@ -602,26 +602,20 @@ Tags may be used to store any named scalar information with an asset, but in par
 </tbody>
 </table>
 <p><br/></p>
-<h3 id="type-ged4allcategory_enum">Type: <em>ged4all.category_enum</em></h3>
-<p>The enumerated list of possible assert categories.</p>
+<h3 id="types">Types</h3>
 <table class="table">
 <thead>
 <tr>
-<th scope="col"><strong>ENUM</strong></th>
+<th scope="col"><strong>ENUM name</strong></th>
+<th scope="col">Types</th>
+<th scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>buildings</td>
-</tr>
-<tr>
-<td>indicators</td>
-</tr>
-<tr>
-<td>infrastructure</td>
-</tr>
-<tr>
-<td>crops, livestock and forestry</td>
+<td>calc_method_enum</td>
+<td><ul><li>Buildings<li>Indicators<li>Infrastructure<li>Crops, livestock and forestry</td>
+<td>Type of asset category</td>
 </tr>
 </tbody>
 </table>
