@@ -1,5 +1,5 @@
 # Data access and usage
-The data hosted by the RDL database can be accessed in different ways. Datasets for each of the schemas are listed in the [Data page](http://riskdatalibrary.org/data) for direct download as CSV or GEOJSON, but the PosGIS database can also be accessed via GIS software or scripting languages such as R and Python.
+The data hosted by the RDL database can be accessed in different ways. Datasets for each of the schemas are listed in the [Data page](http://riskdatalibrary.org/data) for direct download as CSV or GEOJSON, but the PostGIS database can also be accessed via GIS software or scripting languages such as R and Python.
 
 **PLEASE NOTE:** this section is Work In Progress
 
