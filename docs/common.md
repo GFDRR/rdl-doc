@@ -160,23 +160,10 @@ The content of these common tables is as follows:
 | **ODC-By** | Open Data Commons Attribution License(ODC-BY) | Attribution for data(bases) | https://opendatacommons.org/licenses/by/summary/ |
 
 <br/>
+###Types
 
-###Type: _cf\_common.occupancy\_enum_
-Enumerator list of common types related to asset occupancy.
-
-| **ENUM** |
-|---|
-| Residential |
-| Commercial |
-| Industrial |
-| Infrastructure |
-| Healthcare |
-| Educational |
-| Government |
-| Crop |
-| Livestock |
-| Forestry |
-| Mixed |
-
+| **ENUM name** | Types | Description |
+| --- | --- | --- |
+| calc\_method\_enum | <ul><li>Residential<li>Commercial<li>Industrial<li>Infrastructure<li>Healthcare<li>Educational<li>Government<li>Crop<li>Livestock<li>Forestry<li>Mixed | Common types related to asset occupancy. |
 
 <br/>

@@ -119,13 +119,10 @@ The &quot;Footprint\_data&quot; entity contains the footprint data: the value of
 | **\*** | intensity | FLOAT | | The hazad process intensity value in the IMT described in &quot;Footprint set&quot; |
 
 <br/>
-###Type: _calc\_method\_enum_
-An enumerated list of possible hazard footprint calculation methods applied.
+###Types
 
-| **ENUM** | **Description** |
-| --- | --- |
-| INF | Inferred |
-| SIM | Simulated |
-| OBS | Observed |
+| **ENUM name** | Types | Description |
+| --- | --- | --- |
+| calc\_method\_enum | <ul><li>Inferred<li>Simulated<li>Observed | Type of calculation method applied to produce hazard footprint. |
 
 <br/>
