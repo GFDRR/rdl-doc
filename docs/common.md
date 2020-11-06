@@ -164,6 +164,6 @@ The content of these common tables is as follows:
 
 | **ENUM name** | Types | Description |
 | --- | --- | --- |
-| calc\_method\_enum | <ul><li>Residential<li>Commercial<li>Industrial<li>Infrastructure<li>Healthcare<li>Educational<li>Government<li>Crop<li>Livestock<li>Forestry<li>Mixed | Common types related to asset occupancy. |
+| occupancy\_enum | <ul><li>Residential<li>Commercial<li>Industrial<li>Infrastructure<li>Healthcare<li>Educational<li>Government<li>Crop<li>Livestock<li>Forestry<li>Mixed | Common types related to asset occupancy. |
 
 <br/>
