@@ -138,3 +138,15 @@ Tags may be used to store any named scalar information with an asset, but in par
 | calc\_method\_enum | <ul><li>Buildings<li>Indicators<li>Infrastructure<li>Crops, livestock and forestry | Type of asset category |
 
 <br/>
+
+###Taxonomies
+The exposure schema can accomodate different descriptions of assets using existing taxonomies which describe their characteristics (e.g. building occupancy, construction, age, height, etc. or road surface type). The taxonomy being applied to a dataset is defined in _ged4all.exposure\_model.taxonomy\_source_. The taxonomy string, which describes the characteristics of the asset (or group of assets of the same type), is defined at _ged4all.asset.taxonomy_. It uses a single field description because the schema is designed to use the GEM taxonomy, which is described in full here [here](https://www.globalquakemodel.org/gempublications/GEM-building-taxonomy-version-2.0) which defines the format of taxonomy strings. GEM provides a ['taxtweb'](https://platform.openquake.org/taxtweb/) tool for creating taxonomy strings and checking the translation of a string. Some example taxonomy strings are provided below:
+
+| Type | Taxoomy examples |
+| --- | --- |
+| Buildings | <ul><li>M99/HEX:1/COM - Unreinforced Masonry/One storey above ground/Commercial use <li>M99/HEX:2/RES+RES1 - Unreinforced Masonry/Two storeys above ground/Residential Single Unit<li>CR/INF - Reinforced Concrete/Industrial use (height unknown) |
+| Infrastructure | <ul><li>RD/PR - Primary road<li>RD/SE - Secondary road<li>... - ... |
+| Crops, livestock and forestry | <ul><li>... - ...<li>... - ...<li>... - ... |
+
+
+<br/>
