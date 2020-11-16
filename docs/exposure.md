@@ -602,6 +602,33 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 - [Index](#index): range of indexes that cover different sectors, for example, the Disaster Risk Index used by the United Nation Development programme to monitor the global evolution of risk.
 - [Infrastructure](#infrastructure): Transportation and communication infrastructure, status and access to utility lifelines
 
+####Population 
+
+| Attribute | Code | Description |
+|-|:-:|-|
+| Population Structure  | POPPPSPOP  | Population |
+|  | POPPPSRPP  | Rural population |
+|  | POPPPSRUB  | Urbanization Rate |
+|  | POPPPSSRI  | Sex ratio |
+|  | POPPPSUPR  | Urban population |
+|  | POPPPSADP  | Age dependency ratio |
+|  | POPPPSAPD  | Average Population Density (areas over 400 ppl/km2) |
+|  | POPPPSCAO  | Percentage of land area with over 400 people per km2 |
+|  | POPPPSIMP  | Foreign Born Migrants |
+|  | POPPPSLPF  | Labour force participation rate - Female |
+|  | POPPPSNMR  | Net migration rate |
+|  | POPPPSPGR  | Population growth rate |
+| Vulnerable Population  | POPVNPSLP  | Slum population in urban areas |
+|  | POPVNPPUF  | Population under 5 |
+|  | POPVNPPIP  | Percentage of the population below income poverty line |
+|  | POPVNPITA  | International tourism arrivals |
+|  | POPVNPFPP  | Female Population |
+|  | POPVNPASE  | Population over 65 |
+|  | POPVNPTPP  | Refugees (country of origin) |
+
+<br>
+####Economy
+
 | Attribute | Code | Description |
 |-|:-:|-|
 | Economic Activity  | ECOEACVLE  | Value lost due to electrical outages |
@@ -809,7 +836,7 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 | INXLPICQL  | Logistics performance index: Competence and quality of logistics services |
 
 <br>
-###Infrastructure
+####Infrastructure
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -836,30 +863,5 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 |  | INFTCOMVC  | Motor vehicles |
 |  | INFTCOMCC  | Mobile cellular subscriptions |
 |  | INFTCORWG  | Railways, goods transported |
-
-<br>
-####Population 
-
-| Attribute | Code | Description |
-|-|:-:|-|
-| Population Structure  | POPPPSPOP  | Population |
-|  | POPPPSRPP  | Rural population |
-|  | POPPPSRUB  | Urbanization Rate |
-|  | POPPPSSRI  | Sex ratio |
-|  | POPPPSUPR  | Urban population |
-|  | POPPPSADP  | Age dependency ratio |
-|  | POPPPSAPD  | Average Population Density (areas over 400 ppl/km2) |
-|  | POPPPSCAO  | Percentage of land area with over 400 people per km2 |
-|  | POPPPSIMP  | Foreign Born Migrants |
-|  | POPPPSLPF  | Labour force participation rate - Female |
-|  | POPPPSNMR  | Net migration rate |
-|  | POPPPSPGR  | Population growth rate |
-| Vulnerable Population  | POPVNPSLP  | Slum population in urban areas |
-|  | POPVNPPUF  | Population under 5 |
-|  | POPVNPPIP  | Percentage of the population below income poverty line |
-|  | POPVNPITA  | International tourism arrivals |
-|  | POPVNPFPP  | Female Population |
-|  | POPVNPASE  | Population over 65 |
-|  | POPVNPTPP  | Refugees (country of origin) |
 
 <br>
