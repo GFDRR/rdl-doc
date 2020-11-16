@@ -272,11 +272,11 @@ Missing attributes can be skipped from the string, e.g.
 ###Lifelines
 The **lifelines** taxonomy includes all infrastructures commonly found in populated areas, such as:
 
-- [roads and railways](#roads-and-railways)
-- [pipelines](#pipelines)
-- [energy generation and power grid](#energy-generation-and-power-grid)
-- [potable water and wastewater system](#potable-water-and-wastewater-systems)
-- [communication systems](#communication-systems)
+- [Roads and railways](#roads-and-railways)
+- [Pipelines](#pipelines)
+- [Energy generation and power grid](#energy-generation-and-power-grid)
+- [Potable water and wastewater system](#potable-water-and-wastewater-systems)
+- [Communication systems](#communication-systems)
 
 Three main sources of information have been used for the definition of this taxonomy: FP7 EU Project [Syner-G](http://www.vce.at/SYNER-G), HAZUS11 recommendations, and the OpenStreetMap (OSM) classification system.
 
