@@ -149,7 +149,7 @@ The taxonomy covers four main categories:
 - [Buildings](#buildings)
 - [Lifelines](#lifelines)
 - [Crops, Livestock and Forestry](#crops-livestock-and-forestry)
-- [Socio-Economic indicators](/exposure.html#socio-economic-indicators)
+- [Socio-Economic indicators](#socio-economic-indicators)
 
 ###Buildings
 The buildings taxonomy is based on GEM openquake taxonomy, with some semplifications. The taxonomy string is built as sequence of attributes separeted by slash:
