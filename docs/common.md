@@ -5,6 +5,7 @@ Each schema has specific tables, but as part of the database schema harmonizatio
 2. The _cf\_common.process\_type_ table contains the process type codes and related names (each hazard may have more than one process).
 3. The _cf\_common.imt_ table contains the intensity measure for each process and its description.
 4. The _cf\_common.license_ table provides a list of supported open-data licenses and url for more detailed information.
+5. The _cf\_common.iso_ table lists the ISO 3166 alpha-3 codes for countries, to specify datasets coverage.
 
 |     Table name                |     Required    |     Field name      |     Type       |     Description                         |
 |-------------------------------|:---------------:|:-------------------:|:--------------:|:---------------------------------------:|
@@ -32,7 +33,7 @@ Each schema has specific tables, but as part of the database schema harmonizatio
 <br/>
 The content of these common tables is as follows:
 
-###Table: _cf\_common.hazard\_type_ describes the main hazard types
+###Table: _cf\_common.hazard\_type_
 
 | **code** | **name** |
 |---|---|
@@ -51,7 +52,7 @@ The content of these common tables is as follows:
 
 <br/>
 
-###Table: _cf\_common.process\_type_ describes the processes of hazard more in detail
+###Table: _cf\_common.process\_type_
 
 | **code** | **hazard\_code** | **name** |
 |---|---|---|
@@ -85,7 +86,7 @@ The content of these common tables is as follows:
 
 <br/>
 
-###Table: _cf\_common.imt_ describes the unit of measure for each hazard and preocess.
+###Table: _cf\_common.imt_
 
 | **_process\_code_** | **_hazard\_code_** | **_im\_code_** | **_description_** |
 |---|---|---|---|
@@ -152,7 +153,7 @@ The content of these common tables is as follows:
 
 <br/>
 
-###Table: _cf\_common.license_ describes the accepted data licenses for datasets.
+###Table: _cf\_common.license_
 
 | **code** | **name** | **description** | **url** |
 |---|---|---|---|
@@ -164,7 +165,7 @@ The content of these common tables is as follows:
 
 <br/>
 
-###Table: _cf\_common.iso_ lists the ISO 3166 alpha-3 codes for countries, to specify datasets coverage.
+###Table: _cf\_common.iso_
 
 | **code** | **name** |
 |---|---|
