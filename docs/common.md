@@ -29,7 +29,7 @@ Each schema has specific tables, but as part of the database schema harmonizatio
 <br/>
 The content of these common tables is as follows:
 
-###Table: _cf\_common.hazard\_type_
+###Table: _cf\_common.hazard\_type_ describes the main hazard types
 
 | **code** | **name** |
 |---|---|
@@ -48,7 +48,7 @@ The content of these common tables is as follows:
 
 <br/>
 
-###Table: _cf\_common.process\_type_
+###Table: _cf\_common.process\_type_ describes the processes of hazard more in detail
 
 | **code** | **hazard\_code** | **name** |
 |---|---|---|
@@ -82,7 +82,7 @@ The content of these common tables is as follows:
 
 <br/>
 
-###Table: _cf\_common.imt_
+###Table: _cf\_common.imt_ describes the unit of measure for each hazard and preocess.
 
 | **_process\_code_** | **_hazard\_code_** | **_im\_code_** | **_description_** |
 |---|---|---|---|
@@ -149,7 +149,7 @@ The content of these common tables is as follows:
 
 <br/>
 
-###Table: _cf\_common.license_
+###Table: _cf\_common.license_ describes the accepted data licenses for datasets.
 
 | **code** | **name** | **description** | **url** |
 |---|---|---|---|
@@ -160,10 +160,249 @@ The content of these common tables is as follows:
 | **ODC-By** | Open Data Commons Attribution License(ODC-BY) | Attribution for data(bases) | https://opendatacommons.org/licenses/by/summary/ |
 
 <br/>
+
+###Table: _cf\_common.iso_ lists the ISO 3166 alpha-3 codes for countries, to specify datasets coverage.
+
+| **ISO_A3** | **country_name** |
+|---|---|
+| ABW | Aruba |
+| AFG | Afghanistan |
+| AGO | Angola |
+| AIA | Anguilla |
+| ALB | Albania |
+| AND | Andorra |
+| ARE | United Arab Emirates |
+| ARG | Argentina |
+| ARM | Armenia |
+| ASM | American Samoa |
+| ATG | Antigua and Barbuda |
+| AUS | Australia |
+| AUT | Austria |
+| AZE | Azerbaijan |
+| BDI | Burundi |
+| BEL | Belgium |
+| BEN | Benin |
+| BFA | Burkina Faso |
+| BGD | Bangladesh |
+| BGR | Bulgaria |
+| BHR | Bahrain |
+| BHS | The Bahamas |
+| BIH | Bosnia and Herzegovina |
+| BLM | Saint-Barthélemy |
+| BLR | Belarus |
+| BLZ | Belize |
+| BMU | Bermuda |
+| BOL | Bolivia |
+| BRA | Brazil |
+| BRB | Barbados |
+| BRN | Brunei |
+| BTN | Bhutan |
+| BWA | Botswana |
+| CAF | Central African Republic |
+| CAN | Canada |
+| CHE | Switzerland |
+| CHL | Chile |
+| CHN | People's Republic of China |
+| CIV | Ivory Coast |
+| CMR | Cameroon |
+| COD | Democratic Republic of the Congo |
+| COG | Republic of the Congo |
+| COK | Cook Islands |
+| COL | Colombia |
+| COM | Comoros |
+| CPV | Cape Verde |
+| CRI | Costa Rica |
+| CUB | Cuba |
+| CUW | Curaçao |
+| CYM | Cayman Islands |
+| CYP | Cyprus |
+| CZE | Czech Republic |
+| DEU | Germany |
+| DJI | Djibouti |
+| DMA | Dominica |
+| DNK | Denmark |
+| DOM | Dominican Republic |
+| DZA | Algeria |
+| ECU | Ecuador |
+| EGY | Egypt |
+| ERI | Eritrea |
+| ESP | Spain |
+| EST | Estonia |
+| ETH | Ethiopia |
+| FIN | Finland |
+| FJI | Fiji |
+| FLK | Falkland Islands |
+| FRA | France |
+| FRO | Faroe Islands |
+| FSM | Federated States of Micronesia |
+| GAB | Gabon |
+| GBR | United Kingdom |
+| GEO | Georgia |
+| GGY | Guernsey |
+| GHA | Ghana |
+| GIB | Gibraltar |
+| GIN | Guinea |
+| GMB | The Gambia |
+| GNB | Guinea-Bissau |
+| GNQ | Equatorial Guinea |
+| GRC | Greece |
+| GRD | Grenada |
+| GRL | Greenland |
+| GTM | Guatemala |
+| GUM | Guam |
+| GUY | Guyana |
+| HKG | Hong Kong |
+| HMD | Heard Island and McDonald Islands |
+| HND | Honduras |
+| HRV | Croatia |
+| HTI | Haiti |
+| HUN | Hungary |
+| IDN | Indonesia |
+| IMN | Isle of Man |
+| IND | India |
+| IRL | Ireland |
+| IRN | Iran |
+| IRQ | Iraq |
+| ISL | Iceland |
+| ISR | Israel |
+| ITA | Italy |
+| JAM | Jamaica |
+| JEY | Jersey |
+| JOR | Jordan |
+| JPN | Japan |
+| KAZ | Kazakhstan |
+| KEN | Kenya |
+| KGZ | Kyrgyzstan |
+| KHM | Cambodia |
+| KIR | Kiribati |
+| KNA | Saint Kitts and Nevis |
+| KOR | South Korea |
+| KWT | Kuwait |
+| LAO | Laos |
+| LBN | Lebanon |
+| LBR | Liberia |
+| LBY | Libya |
+| LCA | Saint Lucia |
+| LIE | Liechtenstein |
+| LKA | Sri Lanka |
+| LSO | Lesotho |
+| LTU | Lithuania |
+| LUX | Luxembourg |
+| LVA | Latvia |
+| MAC | Macau |
+| MAF | Saint Martin |
+| MAR | Morocco |
+| MCO | Monaco |
+| MDA | Moldova |
+| MDG | Madagascar |
+| MDV | Maldives |
+| MEX | Mexico |
+| MHL | Marshall Islands |
+| MKD | Republic of Macedonia |
+| MLI | Mali |
+| MLT | Malta |
+| MMR | Myanmar |
+| MNE | Montenegro |
+| MNG | Mongolia |
+| MNP | Northern Mariana Islands |
+| MOZ | Mozambique |
+| MRT | Mauritania |
+| MSR | Montserrat |
+| MUS | Mauritius |
+| MWI | Malawi |
+| MYS | Malaysia |
+| NAM | Namibia |
+| NCL | New Caledonia |
+| NER | Niger |
+| NFK | Norfolk Island |
+| NGA | Nigeria |
+| NIC | Nicaragua |
+| NIU | Niue |
+| NLD | Netherlands |
+| NOR | Norway |
+| NPL | Nepal |
+| NRU | Nauru |
+| NZL | New Zealand |
+| OMN | Oman |
+| PAK | Pakistan |
+| PAN | Panama |
+| PCN | Pitcairn Islands |
+| PER | Peru |
+| PHL | Philippines |
+| PLW | Palau |
+| PNG | Papua New Guinea |
+| POL | Poland |
+| PRI | Puerto Rico |
+| PRK | North Korea |
+| PRT | Portugal |
+| PRY | Paraguay |
+| PSE | Palestine |
+| PYF | French Polynesia |
+| QAT | Qatar |
+| ROU | Romania |
+| RUS | Russia |
+| RWA | Rwanda |
+| SAU | Saudi Arabia |
+| SDN | Sudan |
+| SEN | Senegal |
+| SGP | Singapore |
+| SGS | South Georgia and the South Sandwich Islands |
+| SHN | Saint Helena |
+| SLB | Solomon Islands |
+| SLE | Sierra Leone |
+| SLV | El Salvador |
+| SMR | San Marino |
+| SOM | Somalia |
+| SPM | Saint Pierre and Miquelon |
+| SRB | Serbia |
+| SSD | South Sudan |
+| STP | São Tomé and Príncipe |
+| SUR | Suriname |
+| SVK | Slovakia |
+| SVN | Slovenia |
+| SWE | Sweden |
+| SWZ | eSwatini |
+| SXM | Sint Maarten |
+| SYC | Seychelles |
+| SYR | Syria |
+| TCA | Turks and Caicos Islands |
+| TCD | Chad |
+| TGO | Togo |
+| THA | Thailand |
+| TJK | Tajikistan |
+| TKM | Turkmenistan |
+| TLS | East Timor |
+| TON | Tonga |
+| TTO | Trinidad and Tobago |
+| TUN | Tunisia |
+| TUR | Turkey |
+| TUV | Tuvalu |
+| TZA | Tanzania |
+| UGA | Uganda |
+| UKR | Ukraine |
+| URY | Uruguay |
+| USA | United States of America |
+| UZB | Uzbekistan |
+| VAT | Vatican City |
+| VCT | Saint Vincent and the Grenadines |
+| VEN | Venezuela |
+| VGB | British Virgin Islands |
+| VIR | United States Virgin Islands |
+| VNM | Vietnam |
+| VUT | Vanuatu |
+| WLF | Wallis and Futuna |
+| WSM | Samoa |
+| XXK | Kosovo |
+| YEM | Yemen |
+| ZAF | South Africa |
+| ZMB | Zambia |
+| ZWE | Zimbabwe |
+
+<br/>
 ###Types
 
 | **ENUM name** | Types | Description |
 | --- | --- | --- |
-| occupancy\_enum | <ul><li>Residential<li>Commercial<li>Industrial<li>Infrastructure<li>Healthcare<li>Educational<li>Government<li>Crop<li>Livestock<li>Forestry<li>Mixed | Common types related to asset occupancy. |
+| occupancy\_enum | <ul><li>Residential<li>Commercial<li>Industrial<li>Infrastructure<li>Healthcare<li>Educational<li>Government<li>Crop<li>Livestock<li>Forestry<li>Mixed occupancy| Common types related to asset occupancy. |
 
 <br/>
