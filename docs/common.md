@@ -25,6 +25,9 @@ Each schema has specific tables, but as part of the database schema harmonizatio
 |                               |         *       |     name            |     VARCHAR    |     Name of license                     |
 |                               |                 |     notes           |     TEXT       |     Additional notes                    |
 |                               |         *       |     url             |     VARCHAR    |     License url reference               |
+|-------------------------------|-----------------|---------------------|----------------|-----------------------------------------|
+|     cf_common.iso             |         *       |     code            |     VARCHAR    |     ISO 3166 ALPHA-3 country code       |
+|                               |         *       |     name            |     VARCHAR    |     Country name			   |
 
 <br/>
 The content of these common tables is as follows:
@@ -163,7 +166,7 @@ The content of these common tables is as follows:
 
 ###Table: _cf\_common.iso_ lists the ISO 3166 alpha-3 codes for countries, to specify datasets coverage.
 
-| **ISO_A3** | **country_name** |
+| **code** | **name** |
 |---|---|
 | ABW | Aruba |
 | AFG | Afghanistan |
