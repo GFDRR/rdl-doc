@@ -1,6 +1,31 @@
 
 ## Common tables
-Each schema has specific tables, but as part of the database schema harmonization process, we make use of a _cf\_common_ namespace containing tables that are common to each schema. This ensures consistent hazard naming, intensity parameters and licences within each schema.
+Each schema has specific tables, but as part of the database schema harmonization process, the _cf\_common_ schema contains tables that are shared among each schema. This ensures consistent hazard naming, intensity parameters and licences within each schema.
+
+###Table: _cf\_common.contribution_
+
+The _hazard.contribution_ table includes general information about the dataset, such as the name of the source model which identifies the data, the name of project that produced the data, the purpose of the data, additional notes, model version (for data version control) and data license.
+
+| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
+|:---:| --- | --- | --- | --- |
+| **\*** | id | INT || Unique number ID |
+| **\*** | component | ENUM | _cf\_common.component_enum_ | Unique number ID |
+| **\*** | set\_id | INT || Unique number ID of set |
+| **\*** | model\_source | VARCHAR || Name of source model |
+| **\*** | model\_date | DATE || Model release date |
+| | project | VARCHAR | | Project under which data has been produced |
+| | purpose | TEXT | | Purpose for what the data has been produced |
+| | notes | TEXT | | Details about the dataset |
+| | version | VARCHAR | | Version of the dataset |
+| **\*** | geo\_coverage | VARCHAR | _cf\_common.iso_ | ISO code(s) of countries covered by the dataset, comma-separated |
+| **\*** | contributed\_at | timestamp | | Date of contribution |
+| **\*** | license\_code | VARCHAR | _cf\_common.license_ | Type of license |
+| **\*** | publish | BOOLEAN | | Show/Hide dataset from webpage |
+
+<br/>
+
+Five additional tables provide the code and name for specific hazard and process, intensity measures, license types and country coverage.
+
 1. The _cf\_common.hazard\_type_ table contains the hazard codes and related names.
 2. The _cf\_common.process\_type_ table contains the process type codes and related names (each hazard may have more than one process).
 3. The _cf\_common.imt_ table contains the intensity measure for each process and its description.
@@ -407,6 +432,7 @@ The content of these common tables is as follows:
 
 | **ENUM name** | Types | Description |
 | --- | --- | --- |
+| component\_enum | <ul><li>Hazard<li>Exposure<li>Vulnerability<li>Loss | Which schema component the contribution refers to.|
 | occupancy\_enum | <ul><li>Residential<li>Commercial<li>Industrial<li>Infrastructure<li>Healthcare<li>Educational<li>Government<li>Crop<li>Livestock<li>Forestry<li>Mixed occupancy| Common types related to asset occupancy. |
 
 <br/>

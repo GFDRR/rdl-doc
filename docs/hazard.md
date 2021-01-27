@@ -20,26 +20,6 @@ Inclusion of an event start and end time enables description of long-duration ev
 ![Screenshot](img/hazard.png)
 ERD (hazard schema): hazard table contents (red) and links to common tables (yellow).
 
-<br/>
-###Table: _hazard.contribution_
-
-The _hazard.contribution_ entity contains information about the hazard model used to generate the event set. 
-It describes the model and the project, notes about the model and event set and purpose of data, contribution date and model version (for data version control) and hazard data license.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **\*** | id | INT || Unique number ID |
-| **\*** | event\_set\_id | INT || Unique number ID of event\_set |
-| **\*** | model\_source | VARCHAR || Name of source model |
-| **\*** | model\_date | DATE || Model release date |
-| | notes | TEXT | | Details about the dataset |
-| | version | VARCHAR | | Version of the dataset |
-| | purpose | TEXT | | Purpose for what the data has been produced |
-| | project | VARCHAR | | Project under which data has been produced |
-| **\*** | contributed\_at | timestamp | | Date of contribution |
-| **\*** | license\_code | VARCHAR | _cf\_common.license_ | Type of license |
-
-<br/>
 ###Table: _hazard.event\_set_
 
 The &quot;event.set&quot; entity contains information on a set of events for a given area, with event set duration, description, bibliography and defines the event set as probabilistic or deterministic.

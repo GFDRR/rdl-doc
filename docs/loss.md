@@ -19,23 +19,6 @@ The associated loss and loss curve values may optionally include an asset refere
 ![Screenshot](img/loss.png)
 ERD (modeled loss schema): loss table contents (violet) and links to common tables (yellow). The schema includes a SQL view (pink).
 
-###Table: _loss.contribution_
-This table provides metadata on the data license, verions, source model and purpose of the data.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **\*** | id | INT | | Unique number ID |
-| **\*** | loss\_model\_id | INT | | Unique number ID of source exposure model |
-| **\*** | model\_source | VARCHAR | | Name of source model |
-| **\*** | model\_date | DATE | | Model release date |
-| | notes | TEXT | | Details about the dataset |
-| | version | VARCHAR | | Version of the dataset |
-| | purpose | TEXT | | Purpose for what the data has been produced |
-| | project | VARCHAR | | Project under which data has been produced |
-| **\*** | contributed\_at | timestamp | | Date of contribution |
-| **\*** | license\_code | VARCHAR | _cf\_common.license_ | Type of license |
-
-<br/>
 ###Table: _loss.model_
 Each entry in this table represents a single loss model, describing the hazard and process, and data used to generate the losses.
 
@@ -58,7 +41,7 @@ Loss exceedance curves are contained elsewhere, in _loss.curve\_map_.
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | loss\_model\_id | INT | | Unique number ID of source exposure model |
+| **\*** | loss\_model\_id | INT | | Unique number ID of source loss model |
 | **\*** | occupancy | _cf\_common.occupancy\_enum_ | | Destination of use of the asset |
 | **\*** | component | _loss.component\_enum_ | | Type of affected component (e.g. buildings) |
 | **\*** | loss\_type | _loss.loss\_type\_enum_ | | Type of loss (e.g. ground-up) |

@@ -13,25 +13,6 @@ Exposure units can be assigned the number night-time or day-time occupants, to r
 ![Screenshot](img/exposure.png)
 ERD (exposure schema): exposure table contents (green) and links to common tables (yellow). The schema includes a SQL view (cyan).
 
-##Tables
-###Table: _ged4all.contribution_
-
-This table contains metadata for the exposure dataset, including the exposure model source, data version and license, the project it was produced in, the purpose of the dataset and additional notes.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **\*** | id | INT | | Unique number ID |
-| **\*** | event\_set\_id | INT | | Unique number ID of event\_set |
-| **\*** | model\_source | VARCHAR | | Name of source model |
-| **\*** | model\_date | DATE | | Model release date |
-| | notes | TEXT | | Details about the dataset |
-| | version | VARCHAR | | Version of the dataset |
-| | purpose | TEXT | | Purpose for what the data has been produced |
-| | project | VARCHAR | | Project under which data has been produced |
-| **\*** | contributed\_at | timestamp | | Date of contribution |
-| **\*** | license\_code | VARCHAR | _cf\_common.license_ | Type of license |
-
-<br/>
 ###Table: _ged4all.exposure\_model_
 
 Each row in this table represents a collection of assets with a taxonomy\_source (GEM Taxonomy, SynerG, FAO, etc) and category (buildings, road network, etc). 
