@@ -178,7 +178,7 @@ ERD (modeled loss schema): loss table contents (violet) and links to common tabl
 <td align="center"><strong>*</strong></td>
 <td>name</td>
 <td>VARCHAR</td>
-<td></td>
+<td><em>loss.model</em></td>
 <td>Name of source model</td>
 </tr>
 <tr>
@@ -251,7 +251,7 @@ Loss exceedance curves are contained elsewhere, in <em>loss.curve_map</em>.</p>
 <td align="center"><strong>*</strong></td>
 <td>loss_model_id</td>
 <td>INT</td>
-<td></td>
+<td><em>loss.model</em></td>
 <td>Unique number ID of source loss model</td>
 </tr>
 <tr>
@@ -323,7 +323,7 @@ Loss exceedance curves are contained elsewhere, in <em>loss.curve_map</em>.</p>
 <td align="center"><strong>*</strong></td>
 <td>loss_map_id</td>
 <td>INT</td>
-<td></td>
+<td><em>loss.map</em></td>
 <td>Unique number ID of reference loss map</td>
 </tr>
 <tr>
@@ -375,7 +375,7 @@ It describes the unit, type and metric of the loss, which is provided for a give
 <td align="center"><strong>*</strong></td>
 <td>loss_model_id</td>
 <td>INT</td>
-<td></td>
+<td><em>loss.model</em></td>
 <td>Unique number ID of reference loss model</td>
 </tr>
 <tr>
@@ -447,7 +447,7 @@ It describes the unit, type and metric of the loss, which is provided for a give
 <td align="center"><strong>*</strong></td>
 <td>loss_curve_map_id</td>
 <td>INT</td>
-<td></td>
+<td><em>loss.map</em></td>
 <td>Unique number ID of reference loss curve map</td>
 </tr>
 <tr>

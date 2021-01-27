@@ -184,13 +184,6 @@ ERD (hazard schema): hazard table contents (red) and links to common tables (yel
 </tr>
 <tr>
 <td align="center"><strong>*</strong></td>
-<td>geographic_area_name</td>
-<td>VARCHAR</td>
-<td></td>
-<td>Name of the geographic area covered by the hazard analysis (comma-separated list of names).</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
 <td>creation_date</td>
 <td>date</td>
 <td></td>
@@ -273,7 +266,7 @@ The information comprises event duration, occurrence probability or frequency, t
 <td align="center"><strong>*</strong></td>
 <td>event_set_id</td>
 <td>INT</td>
-<td></td>
+<td><em>hazard.event_set</em></td>
 <td>Unique number ID of source exposure model</td>
 </tr>
 <tr>
@@ -373,7 +366,7 @@ The information comprises event duration, occurrence probability or frequency, t
 <td align="center"><strong>*</strong></td>
 <td>event_id</td>
 <td>INT</td>
-<td></td>
+<td><em>hazard.event</em></td>
 <td>The event.id parameter to which this footprint is associated</td>
 </tr>
 <tr>
@@ -425,7 +418,7 @@ The uncertainty of a particular event is captured either by the construction of 
 <td align="center"><strong>*</strong></td>
 <td>footprint_set_id</td>
 <td>INT</td>
-<td></td>
+<td><em>hazard.footprint_set</em></td>
 <td>The footprint_set.id parameter to which this footprint is associated</td>
 </tr>
 <tr>
@@ -469,7 +462,7 @@ The uncertainty of a particular event is captured either by the construction of 
 <td align="center"><strong>*</strong></td>
 <td>footprint_id</td>
 <td>INT</td>
-<td></td>
+<td><em>hazard.footprint</em></td>
 <td>The footprint.id parameter to which this footprint data is associated</td>
 </tr>
 <tr>
