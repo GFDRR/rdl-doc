@@ -78,7 +78,7 @@ The value field provides the actual cost value in the unit specified in the corr
 |:---:| --- | --- | --- | --- |
 | **_\*_** | id | INT | | Unique number ID |
 | **\*** | asset\_id | INT | _ged4all.asset_ | Unique number ID of the asset |
-| **\*** | cost\_type\_id | VARCHAR | | Unique number ID of the cost type |
+| **\*** | cost\_type\_id | INT | _ged4all.cost\_type_ | Unique number ID of the cost type |
 | **\*** | value | FLOAT | | Cost value |
 | | deductible | FLOAT | | |
 | | insurance\_limit | FLOAT | | |
