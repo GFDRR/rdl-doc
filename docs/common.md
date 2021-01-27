@@ -16,6 +16,7 @@ The _hazard.contribution_ table includes general information about the dataset, 
 | | project | VARCHAR | | Project under which data has been produced |
 | | purpose | TEXT | | Purpose for what the data has been produced |
 | | notes | TEXT | | Details about the dataset |
+| | bibliography | TEXT | | Title and authors of documents containing relevant information |
 | | version | VARCHAR | | Version of the dataset |
 | **\*** | geo\_coverage | VARCHAR | _cf\_common.iso_ | ISO code(s) of countries covered by the dataset, comma-separated |
 | **\*** | contributed\_at | timestamp | | Date of contribution |
