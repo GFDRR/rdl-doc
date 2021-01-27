@@ -28,7 +28,6 @@ The &quot;event.set&quot; entity contains information on a set of events for a g
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
 | **\*** | hazard\_type | VARCHAR | _cf\_common.hazard\_type_ | Unique 2-char code |
-| **\*** | geographic\_area\_name | VARCHAR | | Name of the geographic area covered by the hazard analysis (comma-separated list of names). |
 | **\*** | creation\_date | date | | The date of creation [ISO 8601 format] |
 | | time\_start | timestamp | | The time at which the modelled scenario(s) starts [ISO 8601 format] |
 | | time\_end | timestamp | | The time at which the modelled scenario(s) ends [ISO 8601 format] |
@@ -47,7 +46,7 @@ The information comprises event duration, occurrence probability or frequency, t
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | event\_set\_id | INT | | Unique number ID of source exposure model |
+| **\*** | event\_set\_id | INT | _hazard.event\_set_ | Unique number ID of source exposure model |
 | **\*** | calculation\_method | ENUM | | The methodology used for the calculation of this event |
 | | frequency | FLOAT | | The frequency of occurrence of the present event (for the reference period see occurrence\_time\_span or occurrence\_time\_start and occurrence\_time\_end). |
 | | occurrence\_probability | FLOAT | | The probability of occurrence in a given time interval defined either through the occurrence\_time\_start and occurrence\_time\_end or through the occurrence\_time\_span parameter. [float, adimensional]] |
@@ -67,7 +66,7 @@ The &quot;Footprint set&quot; entity contains a sub-group of the &quot;Footprint
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | event\_id | INT | | The event.id parameter to which this footprint is associated |
+| **\*** | event\_id | INT | _hazard.event_ | The event.id parameter to which this footprint is associated |
 | **\*** | process\_type | VARCHAR | _cf\_common.process\_type_ | The typology of hazard process |
 | **\*** | imt | VARCHAR | | Intensity measure types |
 | | data\_uncertainty | VARCHAR | | This attribute describes the typology of uncertainty |
@@ -82,7 +81,7 @@ The uncertainty of a particular event is captured either by the construction of 
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | footprint\_set\_id | INT | | The footprint\_set.id parameter to which this footprint is associated |
+| **\*** | footprint\_set\_id | INT | _hazard.footprint\_set_ | The footprint\_set.id parameter to which this footprint is associated |
 | | trigger\_footprint | INT | | |
 | | uncertainty\_2nd\_moment | FLOAT | | |
 
@@ -94,7 +93,7 @@ The &quot;Footprint\_data&quot; entity contains the footprint data: the value of
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | footprint\_id | INT | | The footprint.id parameter to which this footprint data is associated |
+| **\*** | footprint\_id | INT | _hazard.footprint_ | The footprint.id parameter to which this footprint data is associated |
 | **\*** | the\_geom | GEOM | | Associated geometry data (point location) |
 | **\*** | intensity | FLOAT | | The hazad process intensity value in the IMT described in &quot;Footprint set&quot; |
 

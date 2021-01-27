@@ -44,7 +44,7 @@ There are two geometry fields providing geospatial information:
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | exposure\_model\_id | INT | | Unique number ID of source exposure model |
+| **\*** | exposure\_model\_id | INT | _ged4all.exposure\_model_ | Unique number ID of source exposure model |
 | **\*** | asset\_ref | VARCHAR | | Alphanumeric code supplied by user |
 | **\*** | taxonomy | VARCHAR | | Alphanumeric code for the taxonomy source |
 | | number\_of\_units | FLOAT | | Number of assets represented |
@@ -62,7 +62,7 @@ Each cost type entry describes a category of cost, an aggregation type and a uni
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | exposure\_model\_id | INT | | Unique number ID of source exposure model |
+| **\*** | exposure\_model\_id | INT | _ged4all.exposure\_model_ | Unique number ID of source exposure model |
 | **\*** | cost\_type\_name | VARCHAR | | Type of asset cost (structural, non-structural, contents, business interruption) |
 | **\*** | aggregation\_type | VARCHAR | | Aggregated or per asset |
 | | unit | VARCHAR | | Cost unit of measure |
@@ -77,7 +77,7 @@ The value field provides the actual cost value in the unit specified in the corr
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **_\*_** | id | INT | | Unique number ID |
-| **\*** | asset\_id | INT | | Unique number ID of the asset |
+| **\*** | asset\_id | INT | _ged4all.asset_ | Unique number ID of the asset |
 | **\*** | cost\_type\_id | VARCHAR | | Unique number ID of the cost type |
 | **\*** | value | FLOAT | | Cost value |
 | | deductible | FLOAT | | |
@@ -93,7 +93,7 @@ In some communities the term &quot;occupancy&quot; is used to refer to building 
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **_\*_** | id | INT | | Unique number ID |
-| **\*** | asset\_id | INT | | Unique number ID of the asset |
+| **\*** | asset\_id | INT | _ged4all.asset_ | Unique number ID of the asset |
 | **\*** | period | VARCHAR | | Occupancy type (night/day) |
 | **\*** | occupants | FLOAT | | Number of occupants |
 
@@ -108,7 +108,7 @@ Tags may be used to store any named scalar information with an asset, but in par
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **_\*_** | id | INT | | Unique number ID |
-| **\*** | asset\_id | INT | | Unique number ID of the asset |
+| **\*** | asset\_id | INT | _ged4all.asset_ | Unique number ID of the asset |
 | **\*** | name | VARCHAR | | Name of the tag |
 | **\*** | value | VARCHAR | | Number associated with the tag |
 

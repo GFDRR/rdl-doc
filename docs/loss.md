@@ -1,6 +1,5 @@
 ## Loss DB schema
 
-
 The modelled loss schema enables return period loss estimates and annual average loss to be stored and linked to a geographic unit. 
 Loss datasets can be directly linked to the hazard, exposure, and vulnerability datasets which were used to create the modelled losses via fields in _loss.model_. 
 The dataset also summarises the exposure and hazard types to which the losses relate, independent of those links. 
@@ -25,7 +24,7 @@ Each entry in this table represents a single loss model, describing the hazard a
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **_\*_** | id | INT | | Unique number ID |
-| **\*** | name | VARCHAR | | Name of source model |
+| **\*** | name | VARCHAR | _loss.model_ | Name of source model |
 | | description | TEXT | | Description of source model |
 | | hazard\_type | VARCHAR | _hazard.hazard\_type_ | 2-digit code |
 | | process\_type | VARCHAR | _hazard.process\_type_ | 3-digit code |
@@ -41,7 +40,7 @@ Loss exceedance curves are contained elsewhere, in _loss.curve\_map_.
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | loss\_model\_id | INT | | Unique number ID of source loss model |
+| **\*** | loss\_model\_id | INT | _loss.model_ | Unique number ID of source loss model |
 | **\*** | occupancy | _cf\_common.occupancy\_enum_ | | Destination of use of the asset |
 | **\*** | component | _loss.component\_enum_ | | Type of affected component (e.g. buildings) |
 | **\*** | loss\_type | _loss.loss\_type\_enum_ | | Type of loss (e.g. ground-up) |
@@ -56,7 +55,7 @@ Each entry in this table represents the loss value and location of the value, wi
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | BIGINT | | Unique number ID |
-| **\*** | loss\_map\_id | INT | | Unique number ID of reference loss map |
+| **\*** | loss\_map\_id | INT | _loss.map_ | Unique number ID of reference loss map |
 | | asset\_ref | VARCHAR | | Alphanumeric code that identifies asset from exposure model |
 | **\*** | loss | FLOAT | | Loss value in the unit specified in loss\_map |
 | **\*** | the\_geom | GEOM | | Associated geometry |
@@ -69,7 +68,7 @@ It describes the unit, type and metric of the loss, which is provided for a give
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | INT | | Unique number ID |
-| **\*** | loss\_model\_id | INT | | Unique number ID of reference loss model |
+| **\*** | loss\_model\_id | INT | _loss.model_ | Unique number ID of reference loss model |
 | **\*** | occupancy | cf\_common.occupancy\_enum | | Destination of use of the asset |
 | **\*** | component | loss.component\_enum | | Component affected by loss |
 | **\*** | loss\_type | loss.loss\_type\_enum | | Type of loss |
@@ -84,7 +83,7 @@ Each entry in this table provides the values for a loss esceedance curve and loc
 | **Req** | **Field name** | **Type** | **Reference table** | **Description** |
 |:---:| --- | --- | --- | --- |
 | **\*** | id | BIGINT | | Unique number ID |
-| **\*** | loss\_curve\_map\_id | INT | | Unique number ID of reference loss curve map |
+| **\*** | loss\_curve\_map\_id | INT | _loss.map_ | Unique number ID of reference loss curve map |
 | | asset\_ref | VARCHAR | | Alphanumeric code that identifies asset from exposure model |
 | **\*** | losses | VARCHAR | | Loss values in the unit specified in _loss\_curve\_map_ |
 | **\*** | rates | FLOAT | | Rate values associates with losses |
