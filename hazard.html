@@ -61,8 +61,6 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="hazard.html">Hazard schema</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#table-hazardcontribution">Table: hazard.contribution</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#table-hazardevent_set">Table: hazard.event_set</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#table-hazardevent">Table: hazard.event</a>
@@ -157,94 +155,6 @@ Hazard footprints can be assigned an occurrence frequency, and can represent a s
 Inclusion of an event start and end time enables description of long-duration events.</p>
 <p><img alt="Screenshot" src="img/hazard.png" />
 ERD (hazard schema): hazard table contents (red) and links to common tables (yellow).</p>
-<p><br/></p>
-<h3 id="table-hazardcontribution">Table: <em>hazard.contribution</em></h3>
-<p>The <em>hazard.contribution</em> entity contains information about the hazard model used to generate the event set. 
-It describes the model and the project, notes about the model and event set and purpose of data, contribution date and model version (for data version control) and hazard data license.</p>
-<table class="table">
-<thead>
-<tr>
-<th align="center"><strong>Req</strong></th>
-<th scope="col"><strong>Field name</strong></th>
-<th scope="col"><strong>Type</strong></th>
-<th scope="col"><strong>Reference table</strong></th>
-<th scope="col"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>id</td>
-<td>INT</td>
-<td></td>
-<td>Unique number ID</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>event_set_id</td>
-<td>INT</td>
-<td></td>
-<td>Unique number ID of event_set</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>model_source</td>
-<td>VARCHAR</td>
-<td></td>
-<td>Name of source model</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>model_date</td>
-<td>DATE</td>
-<td></td>
-<td>Model release date</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>notes</td>
-<td>TEXT</td>
-<td></td>
-<td>Details about the dataset</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>version</td>
-<td>VARCHAR</td>
-<td></td>
-<td>Version of the dataset</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>purpose</td>
-<td>TEXT</td>
-<td></td>
-<td>Purpose for what the data has been produced</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>project</td>
-<td>VARCHAR</td>
-<td></td>
-<td>Project under which data has been produced</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>contributed_at</td>
-<td>timestamp</td>
-<td></td>
-<td>Date of contribution</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>license_code</td>
-<td>VARCHAR</td>
-<td><em>cf_common.license</em></td>
-<td>Type of license</td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
 <h3 id="table-hazardevent_set">Table: <em>hazard.event_set</em></h3>
 <p>The &quot;event.set&quot; entity contains information on a set of events for a given area, with event set duration, description, bibliography and defines the event set as probabilistic or deterministic.</p>
 <table class="table">

@@ -63,23 +63,17 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="exposure.html">Exposure schema</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#table-ged4allcontribution">Table: ged4all.contribution</a>
+    <li class="toctree-l2"><a class="reference internal" href="#table-ged4allexposure_model">Table: ged4all.exposure_model</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-ged4allexposure_model">Table: ged4all.exposure_model</a>
+    <li class="toctree-l2"><a class="reference internal" href="#table-ged4allasset">Table: ged4all.asset</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-ged4allasset">Table: ged4all.asset</a>
+    <li class="toctree-l2"><a class="reference internal" href="#table-ged4allcost_type">Table: ged4all.cost_type</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-ged4allcost_type">Table: ged4all.cost_type</a>
+    <li class="toctree-l2"><a class="reference internal" href="#table-ged4allcost">Table: ged4all.cost</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-ged4allcost">Table: ged4all.cost</a>
+    <li class="toctree-l2"><a class="reference internal" href="#table-ged4alloccupancy">Table: ged4all.occupancy</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-ged4alloccupancy">Table: ged4all.occupancy</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-ged4alltags">Table: ged4all.tags</a>
-    </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#table-ged4alltags">Table: ged4all.tags</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
     </li>
@@ -207,93 +201,6 @@ The tables include general attributes that can be adapted to each asset type. Mo
 Exposure units can be assigned the number night-time or day-time occupants, to represent population exposure.</p>
 <p><img alt="Screenshot" src="img/exposure.png" />
 ERD (exposure schema): exposure table contents (green) and links to common tables (yellow). The schema includes a SQL view (cyan).</p>
-<h2 id="tables">Tables</h2>
-<h3 id="table-ged4allcontribution">Table: <em>ged4all.contribution</em></h3>
-<p>This table contains metadata for the exposure dataset, including the exposure model source, data version and license, the project it was produced in, the purpose of the dataset and additional notes.</p>
-<table class="table">
-<thead>
-<tr>
-<th align="center"><strong>Req</strong></th>
-<th scope="col"><strong>Field name</strong></th>
-<th scope="col"><strong>Type</strong></th>
-<th scope="col"><strong>Reference table</strong></th>
-<th scope="col"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>id</td>
-<td>INT</td>
-<td></td>
-<td>Unique number ID</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>event_set_id</td>
-<td>INT</td>
-<td></td>
-<td>Unique number ID of event_set</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>model_source</td>
-<td>VARCHAR</td>
-<td></td>
-<td>Name of source model</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>model_date</td>
-<td>DATE</td>
-<td></td>
-<td>Model release date</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>notes</td>
-<td>TEXT</td>
-<td></td>
-<td>Details about the dataset</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>version</td>
-<td>VARCHAR</td>
-<td></td>
-<td>Version of the dataset</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>purpose</td>
-<td>TEXT</td>
-<td></td>
-<td>Purpose for what the data has been produced</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>project</td>
-<td>VARCHAR</td>
-<td></td>
-<td>Project under which data has been produced</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>contributed_at</td>
-<td>timestamp</td>
-<td></td>
-<td>Date of contribution</td>
-</tr>
-<tr>
-<td align="center"><strong>*</strong></td>
-<td>license_code</td>
-<td>VARCHAR</td>
-<td><em>cf_common.license</em></td>
-<td>Type of license</td>
-</tr>
-</tbody>
-</table>
-<p><br/></p>
 <h3 id="table-ged4allexposure_model">Table: <em>ged4all.exposure_model</em></h3>
 <p>Each row in this table represents a collection of assets with a taxonomy_source (GEM Taxonomy, SynerG, FAO, etc) and category (buildings, road network, etc). 
 A model can optionally contain one or more cost types (see model_cost_type), e.g. structural, contents and can also optionally contain information about the area occupied by the assets. Finally, a model can optionally specify any number of &quot;tags&quot;, which can be applied to each asset.</p>

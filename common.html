@@ -59,6 +59,8 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="common.html">Common tables</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#table-cf_commoncontribution">Table: cf_common.contribution</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#table-cf_commonhazard_type">Table: cf_common.hazard_type</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#table-cf_commonprocess_type">Table: cf_common.process_type</a>
@@ -140,12 +142,115 @@
             <div class="section">
               
                 <h2 id="common-tables">Common tables</h2>
-<p>Each schema has specific tables, but as part of the database schema harmonization process, we make use of a <em>cf_common</em> namespace containing tables that are common to each schema. This ensures consistent hazard naming, intensity parameters and licences within each schema.
-1. The <em>cf_common.hazard_type</em> table contains the hazard codes and related names.
-2. The <em>cf_common.process_type</em> table contains the process type codes and related names (each hazard may have more than one process).
-3. The <em>cf_common.imt</em> table contains the intensity measure for each process and its description.
-4. The <em>cf_common.license</em> table provides a list of supported open-data licenses and url for more detailed information.
-5. The <em>cf_common.iso</em> table lists the ISO 3166 alpha-3 codes for countries, to specify datasets coverage.</p>
+<p>Each schema has specific tables, but as part of the database schema harmonization process, the <em>cf_common</em> schema contains tables that are shared among each schema. This ensures consistent hazard naming, intensity parameters and licences within each schema.</p>
+<h3 id="table-cf_commoncontribution">Table: <em>cf_common.contribution</em></h3>
+<p>The <em>hazard.contribution</em> table includes general information about the dataset, such as the name of the source model which identifies the data, the name of project that produced the data, the purpose of the data, additional notes, model version (for data version control) and data license.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>set_id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID of set</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>model_source</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Name of source model</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>model_date</td>
+<td>DATE</td>
+<td></td>
+<td>Model release date</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>project</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Project under which data has been produced</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>purpose</td>
+<td>TEXT</td>
+<td></td>
+<td>Purpose for what the data has been produced</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>notes</td>
+<td>TEXT</td>
+<td></td>
+<td>Details about the dataset</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>version</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Version of the dataset</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>geo_coverage</td>
+<td>VARCHAR</td>
+<td><em>cf_common.iso</em></td>
+<td>ISO code(s) of countries covered by the dataset, comma-separated</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>contributed_at</td>
+<td>timestamp</td>
+<td></td>
+<td>Date of contribution</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>license_code</td>
+<td>VARCHAR</td>
+<td><em>cf_common.license</em></td>
+<td>Type of license</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>publish</td>
+<td>BOOLEAN</td>
+<td></td>
+<td>Show/Hide dataset from webpage</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p>Five additional tables provide the code and name for specific hazard and process, intensity measures, license types and country coverage.</p>
+<ol>
+<li>The <em>cf_common.hazard_type</em> table contains the hazard codes and related names.</li>
+<li>The <em>cf_common.process_type</em> table contains the process type codes and related names (each hazard may have more than one process).</li>
+<li>The <em>cf_common.imt</em> table contains the intensity measure for each process and its description.</li>
+<li>The <em>cf_common.license</em> table provides a list of supported open-data licenses and url for more detailed information.</li>
+<li>The <em>cf_common.iso</em> table lists the ISO 3166 alpha-3 codes for countries, to specify datasets coverage.</li>
+</ol>
 <table class="table">
 <thead>
 <tr>
