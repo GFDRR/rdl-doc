@@ -117,7 +117,7 @@ Tags may be used to store any named scalar information with an asset, but in par
 
 | **ENUM name** | Types | Description |
 | --- | --- | --- |
-| calc\_method\_enum | <ul><li>Buildings<li>Indicators<li>Infrastructure<li>Crops, livestock and forestry | Type of asset category |
+| category_enum | <ul><li>Buildings<li>Indicators<li>Infrastructure<li>Crops, livestock and forestry | Type of asset category |
 
 <br/>
 
