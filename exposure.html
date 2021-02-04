@@ -71,7 +71,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#table-ged4allcost">Table: ged4all.cost</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-ged4alloccupancy">Table: ged4all.occupancy</a>
+    <li class="toctree-l2"><a class="reference internal" href="#table-ged4alloccupants">Table: ged4all.occupants</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#table-ged4alltags">Table: ged4all.tags</a>
     </li>
@@ -471,7 +471,7 @@ The value field provides the actual cost value in the unit specified in the corr
 </tbody>
 </table>
 <p><br/></p>
-<h3 id="table-ged4alloccupancy">Table: <em>ged4all.occupancy</em></h3>
+<h3 id="table-ged4alloccupants">Table: <em>ged4all.occupants</em></h3>
 <p>The occupancy table is used to store information about the occupants of an asset in a given period, for example, the number of people in a given building during the day and during the night. 
 For some cases the period might refer to a season, for example when considering livestock or agricultural assets. 
 In some communities the term &quot;occupancy&quot; is used to refer to building usage, for example &quot;industrial&quot; or &quot;residential&quot;; this concept can be modelled in the GED4ALL schema using tags and/or by using a taxonomy system that supports building usage specification, such as the GEM Building Taxonomy.</p>
@@ -509,7 +509,7 @@ In some communities the term &quot;occupancy&quot; is used to refer to building 
 </tr>
 <tr>
 <td align="center"><strong>*</strong></td>
-<td>occupants</td>
+<td>num_occupants</td>
 <td>FLOAT</td>
 <td></td>
 <td>Number of occupants</td>
@@ -575,7 +575,7 @@ Tags may be used to store any named scalar information with an asset, but in par
 </thead>
 <tbody>
 <tr>
-<td>calc_method_enum</td>
+<td>category_enum</td>
 <td><ul><li>Buildings<li>Indicators<li>Infrastructure<li>Crops, livestock and forestry</td>
 <td>Type of asset category</td>
 </tr>
