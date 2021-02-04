@@ -84,7 +84,7 @@ The value field provides the actual cost value in the unit specified in the corr
 | | insurance\_limit | FLOAT | | |
 
 <br/>
-###Table: _ged4all.occupancy_
+###Table: _ged4all.occupants_
 
 The occupancy table is used to store information about the occupants of an asset in a given period, for example, the number of people in a given building during the day and during the night. 
 For some cases the period might refer to a season, for example when considering livestock or agricultural assets. 
@@ -95,7 +95,7 @@ In some communities the term &quot;occupancy&quot; is used to refer to building 
 | **_\*_** | id | INT | | Unique number ID |
 | **\*** | asset\_id | INT | _ged4all.asset_ | Unique number ID of the asset |
 | **\*** | period | VARCHAR | | Occupancy type (night/day) |
-| **\*** | occupants | FLOAT | | Number of occupants |
+| **\*** | num_occupants | FLOAT | | Number of occupants |
 
 <br/>
 ###Table: _ged4all.tags_

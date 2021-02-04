@@ -5,7 +5,7 @@ Loss datasets can be directly linked to the hazard, exposure, and vulnerability 
 The dataset also summarises the exposure and hazard types to which the losses relate, independent of those links. 
 
 Enumerated types provide consistent categories for referencing losses as:
-- Component: Buildings, Contents, Direct Damage to other Asset, or Business Interruption
+- Category: Buildings, Contents, Direct Damage to other Asset, or Business Interruption
 - Frequency: Return Period, Probability of exceedance, or Rate of exceedance
 - Loss type: Ground Up (economic) or Insured
 - Metric: Annual average loss, Annual average loss ratio, or Probable maximum loss.
@@ -96,7 +96,7 @@ Includes 4 types including the options for asset categories to which loss refers
 
 | **ENUM name** | Types | Description |
 | --- | --- | --- |
-| component\_enum | <ul><li>Buildings<li>Indicator<li>Infrastructure<li>Crops, livestock and forestry | Types of possible asset categories, consistent with the exposure schema. Indicators refers for example to population density or GDP; infrastructure refers for example to roads, or electricity grid. |
+| Category\_enum | <ul><li>Buildings<li>Indicator<li>Infrastructure<li>Crops, livestock and forestry | Types of possible asset categories, consistent with the exposure schema. Indicators refers for example to population density or GDP; infrastructure refers for example to roads, or electricity grid. |
 | frequency\_enum | <ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period | How the frequency value reported in _loss.curve\_map_ is expressed.|
 | metric\_enum | <ul><li>AAL<li>AALR<li>PML | Type of loss metric used in _loss.curve\_map_ and _loss.map_<br/><br/>Note:<br>AAL = Annual Average Losses<br>AALR = Average Annual Loss Ratio<br>PML = Probable Maximal Loss (also known as Return Period Loss) |
 | loss\_type\_enum | <ul><li>Ground Up<li>Insured | Type of losses in _loss.curve\_map_ and _loss.map_.|
